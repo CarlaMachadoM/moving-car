@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #15a569;
+    background: linear-gradient(to bottom, #1564a5 0%, #d48f21 70%, #323232 100%)
+}
+
+.delorean {
+    position: relative;
+    width: 350px;
+    height: 150px;
+    animation: moverCarro 5s linear infinite;
+}
+
+.carro-body {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #d8d8d8;
+    clip-path: polygon(40% 20%, 30% 40%, 50% 20%, 50% 20%, 0% 20%, 70% 20%, 70% 30%, 70% 30%, 90% 40%, 100% 50%, 100% 100%, 0% 100%);
+    border-radius: 10px;
+}
+
+.farol {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    top: 10px;
+    box-shadow: 0 0 10px 7px rgba(255, 255, 0, 0.7); /* Adiciona o efeito de brilho */
+}
+
+.farol-direito {
+    right: 10px;
+}
+
+.janela {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background-color: #9b9bf3;
+    border-radius: 0 0 10px 10px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.porta {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: #c0c0c0;
+    top: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.porta-esquerda {
+    left: 10px;
+    transform: rotate(-30deg);
+    transform-origin: bottom left;
+    color: #1564a5;
+}
+
+.porta-direita {
+    right: 10px;
+    transform: rotate(30deg);
+    transform-origin: bottom right;
+    color: brown;
+}
+
+.roda {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    bottom: 50px;
+}
+
+.roda-traseira {
+    left: 20px;
+}
+
+.roda-dianteira {
+    right: 20px;
+}
+
+.para-choque {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #333;
+    bottom: 85px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Animação de movimento */
+ @keyframes moverCarro {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+
+    .elemento {
+        animation: moverCarro 5s linear infinite;
+    }
+      
+} 
